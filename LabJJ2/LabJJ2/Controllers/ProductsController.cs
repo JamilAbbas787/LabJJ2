@@ -10,8 +10,16 @@ namespace LabJJ2.Controllers
     public class ProductsController : Controller
     {
         // GET: Products
-        public ActionResult Index(Products model)
+        public ActionResult Index()
         {
+ 
+
+            return View();
+        }
+
+        public ActionResult Add(Products model)
+        {
+
             if (ModelState.IsValid)
             {
                 return RedirectToRoute(new { controller = "Home", action = "Index" });
@@ -19,11 +27,6 @@ namespace LabJJ2.Controllers
 
             return View("Index", model);
         }
-
-        //public ActionResult Add(Products model)
-        //{
-        //    return View("Index", model);
-        //}
 
     }
 }

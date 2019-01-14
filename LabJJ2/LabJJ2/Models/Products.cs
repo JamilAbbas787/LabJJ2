@@ -11,8 +11,8 @@ namespace LabJJ2.Models
     {
 
         // Name(Required, Maxlength 20)
-        [DisplayName("Product Name")]
         [Required]
+        [DisplayName("Product Name")]
         [MaxLength(20)]
         public string Name { get; set; }
 
